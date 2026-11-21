@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1efff;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #5145cd;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #5145cd;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Student Registration</h2>
+
+    <p style="color:red;">{{ error }}</p>
+    <p style="color:green;">{{ success }}</p>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="full_name"
+        placeholder="Full Name" required>
+
+        <input type="email" name="email"
+        placeholder="Email Address" required>
+
+        <input type="password" name="password"
+        placeholder="Password" required>
+
+        <input type="password" name="confirm_password"
+        placeholder="Confirm Password" required>
+
+        <input type="text" name="education"
+        placeholder="Education Qualification" required>
+
+        <textarea name="skills"
+        placeholder="Enter Your Skills" required></textarea>
+
+        <button type="submit">Register Now</button>
+    </form>
+
+</div>
+
+</body>
+</html>

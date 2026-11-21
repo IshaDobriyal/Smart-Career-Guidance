@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Roadmap | SmartCareer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f3ff;
+    color: #25234a;
+}
+
+.navbar {
+    background: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px #ddd;
+}
+
+.logo {
+    color: #5145cd;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #5145cd;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.hero {
+    padding: 65px 7%;
+    color: white;
+    background:
+    linear-gradient(90deg, rgba(45,35,150,.95), rgba(81,69,205,.65)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400")
+    center/cover;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 45px 7%;
+}
+
+.progress-box, .stage, .project-box {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #ddd;
+    margin-bottom: 28px;
+}
+
+.progress-box h2, .stage h2 {
+    color: #5145cd;
+    margin-bottom: 18px;
+}
+
+.progress-bar {
+    height: 15px;
+    background: #e5e1ff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg,#5145cd,#9079f2);
+    transition: .3s;
+}
+
+.stage {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.stage img {
+    width: 220px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.stage-content {
+    flex: 1;
+}
+
+.stage h2 {
+    margin-bottom: 12px;
+}
+
+.stage p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.task {
+    padding: 10px;
+    margin: 7px 0;
+    background: #f4f3ff;
+    border-radius: 8px;
+}
+
+.task input {
+    margin-right: 10px;
+    accent-color: #5145cd;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #f4f3ff;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.project h3 {
+    color: #5145cd;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #666;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+@media(max-width:700px) {
+    .stage {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stage img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">SmartCareer</div>
+    <div>
+        <a href="/dashboard/">Dashboard</a>
+        <a href="/logout/">Logout</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Your Career Roadmap</h1>
+    <p>Plan your learning journey and build the skills needed<br>
+    to become a successful Python Developer.</p>
+</section>
+
+<div class="container">
+
+    <div class="progress-box">
+        <h2>My Learning Progress</h2>
+        <p>Complete the learning tasks to track your progress.</p>
+
+        <h2 id="percentage">0% Completed</h2>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress"></div>
+        </div>
+
+        <p id="completed">0 of 12 tasks completed</p>
+    </div>
+
+    <h1 style="margin-bottom:25px;">Your Learning Path</h1>
+
+    <div class="stage">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600"
+        alt="Learning programming">
+
+        <div class="stage-content">
+            <h2>01. Beginner Level</h2>
+            <p>Build a strong foundation in programming and learn Python basics.</p>
+
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Learn Python Basics</label>
+            </div>
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Understand Variables and Data Types</label>
+            </div>
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Practice Loops and Functions</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="stage">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600"
+        alt="Coding on computer">
+
+        <div class="stage-content">
+            <h2>02. Intermediate Level</h2>
+            <p>Improve your coding skills and learn web development technologies.</p>
+
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Learn HTML and CSS</label>
+            </div>
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Learn JavaScript Basics</label>
+            </div>
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Learn Django Framework</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="stage">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600"
+        alt="Technology development">
+
+        <div class="stage-content">
+            <h2>03. Advanced Level</h2>
+            <p>Learn advanced development concepts and work with databases and APIs.</p>
+
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Learn SQL and Databases</label>
+            </div>
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Learn Django REST Framework</label>
+            </div>
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Learn Git and GitHub</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="stage">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
+        alt="Software development project">
+
+        <div class="stage-content">
+            <h2>04. Job Ready Level</h2>
+            <p>Apply your knowledge through projects and prepare for technical interviews.</p>
+
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Build a Python Project</label>
+            </div>
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Create a GitHub Portfolio</label>
+            </div>
+            <div class="task">
+                <label><input type="checkbox" class="roadmap-task"> Practice Technical Interviews</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <h2 style="color:#5145cd;margin-bottom:22px;">
+            Recommended Projects
+        </h2>
+
+        <div class="project-grid">
+            <div class="project">
+                <h3>Student Management System</h3>
+                <p>Create an application to manage student information using Python and Django.</p>
+            </div>
+
+            <div class="project">
+                <h3>Career Guidance System</h3>
+                <p>Build a system that recommends career options based on student skills.</p>
+            </div>
+
+            <div class="project">
+                <h3>Online Job Portal</h3>
+                <p>Develop a website where students can explore and apply for jobs.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 SmartCareer | Your Future Starts Here
+</footer>
+
+<script>
+const tasks = document.querySelectorAll(".roadmap-task");
+const progress = document.getElementById("progress");
+const percentage = document.getElementById("percentage");
+const completed = document.getElementById("completed");
+
+tasks.forEach((task, index) => {
+    task.checked = localStorage.getItem("roadmap_task_" + index) === "true";
+
+    task.addEventListener("change", function() {
+        localStorage.setItem("roadmap_task_" + index, this.checked);
+        updateProgress();
+    });
+});
+
+function updateProgress() {
+    const total = tasks.length;
+    const done = document.querySelectorAll(".roadmap-task:checked").length;
+    const percent = Math.round((done / total) * 100);
+
+    progress.style.width = percent + "%";
+    percentage.innerText = percent + "% Completed";
+    completed.innerText = done + " of " + total + " tasks completed";
+}
+
+updateProgress();
+</script>
+
+</body>
+</html>

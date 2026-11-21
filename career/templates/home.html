@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Career Guidance System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6ff;
+            color: #222;
+        }
+
+        nav {
+            background: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #5145cd;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+        }
+
+        
+.hero {
+    background: linear-gradient(120deg, #5145cd, #8875ed);
+    color: white;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 480px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 520px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+}
+
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: white;
+            color: #5145cd;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            width: 250px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        .card h3 {
+            color: #5145cd;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: #24213e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>SmartCareer</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="#careers">Careers</a>
+            <a href="#skills">Skill Analysis</a>
+        </div>
+    </nav>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Build Your Future With Smart Career Guidance</h1>
+
+        <p>
+            Discover your strengths, identify skill gaps
+            and find the right career path.
+        </p>
+
+        <a href="#careers" class="btn">Get Started</a>
+
+    </div>
+
+    <div class="hero-image">
+        <img
+        src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1000"
+        alt="Students working together">
+    </div>
+
+</section>
+
+    <section class="section" id="careers">
+        <h2>Explore Career Opportunities</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Web Developer</h3>
+                <p>Learn website development and modern web technologies.</p>
+            </div>
+
+            <div class="card">
+                <h3>Data Analyst</h3>
+                <p>Explore data analysis and problem-solving skills.</p>
+            </div>
+
+            <div class="card">
+                <h3>Software Developer</h3>
+                <p>Build software applications using programming skills.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <h2>Identify Your Skill Gaps</h2>
+
+        <p>
+            Understand your existing skills and discover
+            what you need to learn for your dream career.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Smart Career Guidance System</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill Gap Analysis | SmartCareer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f3ff;
+    color: #25234a;
+}
+
+.navbar {
+    background: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 12px #ddd;
+}
+
+.logo {
+    font-size: 27px;
+    color: #5145cd;
+    font-weight: bold;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #5145cd;
+    font-weight: bold;
+}
+
+.hero {
+    background: linear-gradient(120deg,#5145cd,#8974ed);
+    color: white;
+    padding: 45px 7%;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.container {
+    padding: 40px 7%;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px #ddd;
+    margin-bottom: 25px;
+}
+
+.score {
+    text-align: center;
+}
+
+.score h2 {
+    color: #5145cd;
+    font-size: 48px;
+    margin: 15px;
+}
+
+.progress {
+    background: #e7e4ff;
+    height: 16px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 18px 0;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg,#5145cd,#8974ed);
+    height: 100%;
+    width: {{ percentage }}%;
+    border-radius: 20px;
+}
+
+h2, h3 {
+    color: #5145cd;
+    margin-bottom: 18px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 22px;
+}
+
+.skill {
+    background: #f4f3ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.matched {
+    color: #16834a;
+}
+
+.missing {
+    color: #d04b4b;
+}
+
+.learning {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+}
+
+.learning img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.learning p {
+    color: #666;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">SmartCareer</div>
+    <a href="/dashboard/">Back to Dashboard</a>
+</nav>
+
+<section class="hero">
+    <h1>Skill Gap Analysis</h1>
+    <p>Discover your strengths and improve your technical skills.</p>
+</section>
+
+<div class="container">
+
+    <div class="card score">
+        <h2>Overall Skill Match</h2>
+        <h2>{{ percentage }}%</h2>
+        <div class="progress">
+            <div class="progress-fill"></div>
+        </div>
+        <p>Your current skills match {{ percentage }}% of the selected technical skills.</p>
+    </div>
+
+    <div class="skills">
+
+        <div class="card">
+            <h3>✓ Matched Skills</h3>
+
+            {% for skill in matched_skills %}
+            <div class="skill matched">
+                ✓ {{ skill|title }}
+            </div>
+            {% empty %}
+            <p>No matched skills found.</p>
+            {% endfor %}
+        </div>
+
+        <div class="card">
+            <h3>✗ Skills to Improve</h3>
+
+            {% for skill in missing_skills %}
+            <div class="skill missing">
+                + {{ skill|title }}
+            </div>
+            {% empty %}
+            <p>Congratulations! All required skills matched.</p>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <h2>Recommended Learning Resources</h2>
+
+    <div class="learning">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600" alt="Programming">
+            <h3>Python Programming</h3>
+            <p>Learn programming concepts and build practical projects.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Web development">
+            <h3>Web Development</h3>
+            <p>Improve your HTML, CSS and JavaScript skills.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600" alt="Database">
+            <h3>Database Management</h3>
+            <p>Understand SQL and database management concepts.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 SmartCareer | Skill Gap Analysis
+</footer>
+
+</body>
+</html>

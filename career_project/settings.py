@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-voq4qrk6lpx0t_ovocsaly@zyt1in-i*4xa=md+6(9pcv0u0-_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
- ALLOWED_HOSTS = ['smart-career-guidance-h6w1.onrender.com']
+ALLOWED_HOSTS = ['smart-career-guidance-h6w1.onrender.com']
 
 # Application definition
 
